@@ -1,6 +1,8 @@
-# Projet 2 parcours "Développeur web" chez OpenClassroom.
+# Reservia : Projet 2 parcours "Développeur web" chez OpenClassroom.
 
 L'objectif est d'intégrer une maquette pour un site de planification de vacance nommé "Reservia" fictive en HTML5 & CSS3.
+
+![maquette web reservia](./img/mockup/desktop.png)
 
 ## Éléments fournis par l'entreprise virtuelle.
 - La maquette pour les résolutions ordinateur et téléphone nous est donné.
