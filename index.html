@@ -4,66 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reservia</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer ></script>
 </head>
 <body>
-  <header>
-    <img src="./img/reservia_logo.svg" alt="Reservia">
-    <nav>
-      <a href="#hosting">Hébergement</a>
-      <a href="#activity">Activités</a>
-      <a href="#">S'inscrire</a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <img class="headerImg" src="./img/reservia_logo.svg" alt="Reservia">
+    <!-- <div class="headerSpace"></div> -->
+    <nav class="headerNav">
+      <a class="headerNavLink" href="#hosting" data-active="true">Hébergement</a>
+      <a class="headerNavLink" href="#activity" data-active="false">Activités</a>
     </nav>
+    <a class="headerSignup" href="#">S'inscrire</a>
   </header>
-  <main>
-    <section class="searchSection">
-      <header>
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre de ville ou en pleine nature</p>
+  <!-- HEADER -->
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- SEARCH -->
+    <section class="search">
+      <header class="searchHeader">
+        <h1 class="searchHeaderTitle">Trouvez votre hébergement pour des vacances de rêve</h1>
+        <p class="searchHeaderSubtitle">En plein centre de ville ou en pleine nature</p>
       </header>
-      <form action="proceedFrom.html" method="GET">
-        <div>
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <input type="search" placeholder="Marseille, France">
-        <input type="submit" value="Rechercher">
+      <form class="searchForm" action="proceedFrom.html" method="GET">
+        <span class="searchFormWrapicon">
+          <i class="fas fa-map-marker-alt searchFormWrapiconIcon"></i>
+        </span>
+        <input class="searchFormSearchinput" type="search" placeholder="Marseille, France">
+        <input class="searchFormSubmitinput" type="submit" value="Rechercher">
       </form>
-      <div>
-        <h2>Filtres</h2>
-        <div>
-          <div>
-            <i class="fas fa-money-bill-wave"></i>
+      <div class="searchFilters">
+        <h2 class="searchFiltersTitle">Filtres</h2>
+        <div class="searchFiltersFilter">
+          <div class="searchFiltersFilterWrapicon">
+            <i class="fas fa-money-bill-wave searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3>Économique</h3>
+          <h3 class="searchFiltersFilterTitle">Économique</h3>
         </div>
-        <div>
-          <div>
-            <i class="fas fa-child"></i>
+        <div class="searchFiltersFilter">
+          <div class="searchFiltersFilterWrapicon">
+            <i class="fas fa-child searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3>Familial</h3>
+          <h3 class="searchFiltersFilterTitle">Familial</h3>
         </div>
-        <div>
-          <div>
-            <i class="fas fa-heart"></i>
+        <div class="searchFiltersFilter">
+          <div class="searchFiltersFilterWrapicon">
+            <i class="fas fa-heart searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3>Romantique</h3>
+          <h3 class="searchFiltersFilterTitle">Romantique</h3>
         </div>
-        <div>
-          <div>
-            <i class="fas fa-dog"></i>
+        <div class="searchFiltersFilter">
+          <div class="searchFiltersFilterWrapicon">
+            <i class="fas fa-dog searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3>Animaux autorisés</h3>
+          <h3 class="searchFiltersFilterTitle">Animaux autorisés</h3>
         </div>
       </div>
-      <div>
-        <div><i class="fas fa-info"></i></div>
-        <p>Plus de 500 logements sont disponibles dans cette ville</p>
+      <div class="searchResult">
+        <div class="searchResultWrapicon"><i class="fas fa-info searchResultWrapiconIcon"></i></div>
+        <p class="searchResultText">Plus de 500 logements sont disponibles dans cette ville</p>
       </div>
     </section>
+    <!-- SEARCH -->
+
+    <!-- HOSTING -->
+    <section class="hosting" id="hosting">
+      <div class="hostingMain">
+        <header class="hostingMainHeader">
+          <h2 class="hostingMainHeaderTitle">Hébergement à Marseille</h2>
+        </header>
+        <article class="hostingMainCard">
+          <figure class="hostingMainCardFigure">
+            <img 
+              class="hostingMainCardFigureImg"
+              src="./img/hosting/medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg"
+              alt="Chambre avec un lit superposé avec une fenêtre vu sur la ville."
+            >
+            <figcaption class="hostingMainCardFigureCaption">
+              <h3 class="hostingMainCardFigureCaptionTitle">Auberge la Cannebière</h3>
+            </figcaption>
+          </figure>
+          <p class="hostingMainCardDesc">Nuit à partir de <strong class="hostingMainCardDescPrice">25€</strong></p>
+          <div class="hostingMainCardGrade">
+            <i class="fas fa-star hostingCardGradeIcon"></i>
+            <i class="fas fa-star hostingCardGradeIcon"></i>
+            <i class="fas fa-star hostingCardGradeIcon"></i>
+            <i class="fas fa-star hostingCardGradeIcon"></i>
+            <i class="fas fa-star hostingCardGradeIcon"></i>
+          </div>
+        </article>
+      </div>
+      <aside class="hostingFavorite">
+
+      </aside>
+    </section>
+    <!-- HOSTING -->
+
+    <!-- ACTIVITY -->
+    <section class="activity" id="activity">
+  
+    </section>
+    <!-- ACTIVITY -->
+
   </main>
-  <footer>
+  <!-- MAIN -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
 
   </footer>
+  <!-- FOOTER -->
 </body>
 </html>

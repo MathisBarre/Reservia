@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap')
+
+$blue: #0065FC
+$lightBlue: #DEEBFF
+$grey: #F2F2F2
+$darkGrey: #d9d9d9
+
+$containerMaxWidth: 1440px
+
+body
+  font-family: "Raleway", "Sans serif"
+  margin: 0
+
+a
+  color: inherit
+  text-decoration: none
+  
+.header
+  display: grid
+  align-items: center
+  max-width: $containerMaxWidth
+  margin: auto
+  &Img
+    grid-area: logo
+    padding: 0 2rem
+  &Nav
+    display: flex
+    align-items: center
+    grid-area: navbar
+    &Link
+      padding: 2rem
+      font-weight: 500
+      text-align: center
+      transition-duration: .1s
+      &[data-active='true']
+        color: $blue
+      &:hover
+        color: $blue
+  &Signup
+    display: flex
+    align-items: center
+    grid-area: button
+    padding: 2rem
+    color: $blue
+    font-weight: 600
+
+@media screen and ( min-width: 600px ) // Desktop
+  .header
+    grid-template-columns: auto 1fr auto auto
+    grid-template-areas: "logo . navbar button"
+    // padding: 0 0 0 2rem
+
+    &Nav
+      &Link
+        &[data-active='true']
+          border-top: 3px solid $blue
+
+@media screen and ( max-width: 600px ) // Phone
+  .header
+    grid-template-columns: auto 1fr auto
+    grid-template-areas: "logo . button" "navbar navbar navbar"
+
+    &img
+      order: 0
+    &Signup
+      order: 1
+    &Nav
+      order: 2
+      &Link
+        border-top: none
+        border-bottom: 3px solid $grey
+        width: 50%
+        &[data-active='true']
+          border-bottom-color: $blue
+
+.main
+  max-width: $containerMaxWidth
+  margin: auto
+  padding: 0 2rem
+  box-sizing: border-box
+
+.search
+  &Header
+    &Title
+      margin-bottom: 0.5rem
+    &Subtitle
+      margin-top: 0
+  &Form
+    display: inline-flex
+    max-width: 100%
+    overflow: auto
+    &Wrapicon
+      background-color: $grey
+      padding: 1rem 1.25rem
+      border-radius: 1rem 0 0 1rem
+      text-align: center
+      &Icon
+        margin-left: .1rem
+    &Searchinput
+      border-right: none
+      border-left: none
+      border-top: $grey 1px solid
+      border-bottom: $grey 1px solid
+      padding: 0 1.5rem
+      box-sizing: border-box
+      width: 14rem
+      &::placeholder
+        font-family: "Raleway", "Sans serif"
+        font-size: 1rem
+      // &:focus
+      //   border-top: solid 1px black
+      //   border-bottom: solid 1px black
+      //   border-left: none
+      //   border-right: none
+      //   box-shadow: none
+      //   box-shadow: inner 
+    &Submitinput
+      background-color: $blue
+      color: white
+      font-weight: bold
+      border: none
+      border-radius: 0 1rem 1rem 0
+      padding: 0 1.5rem
+      font-family: "Raleway", "Sans serif"
+      font-size: 1rem
+  &Filters
+    display: flex
+    margin-top: 2rem
+    flex-wrap: wrap
+    &Title
+      margin: 0 2rem 1rem 0
+      display: flex
+      align-items: center
+    &Filter
+      display: flex
+      align-items: center
+      margin-right: 2rem
+      border: 2px solid $darkGrey
+      border-radius: 2rem
+      margin-bottom: 1rem
+      &:last-child
+        margin-right: 0
+      &Wrapicon
+        background-color: $lightBlue
+        border-radius: 100%
+        height: 3rem
+        width: 3rem
+        min-height: 3.5rem
+        min-width: 3.5rem
+        display: flex
+        align-items: center
+        justify-content: center
+        &Icon
+          color: blue
+      &Title
+        margin: 0 1rem
+  &Result
+    display: flex
+    align-items: center
+    margin: 1rem 0 2rem 0
+    &Wrapicon
+      height: 2rem
+      width: 2rem
+      min-height: 2rem
+      min-width: 2rem
+      border: solid 1px $darkGrey
+      border-radius: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 1rem
+      &Icon
+        color: $blue
+    &Text
+      margin: 0
+
+.hostingWrapper
+    background-color: $grey
+    border-radius: 2rem
+    padding: 3rem
+
+.hosting
+  display: grid
+  column-gap: 4rem
+  grid-template-columns: 6fr 3fr
+  &Main
+    @extend .hostingWrapper
+    &Header
+      &Title
+        margin: 0 0 1rem 0
+    &Card
+      background-color: white
+      width: 18rem
+      padding: 0.5rem
+      border-radius: 1.25rem
+      &Figure
+        margin: 0
+        &Img
+          height: 10rem
+          object-fit: cover
+          max-width: 100%
+          width: 100%
+          max-height: 100%
+          border-radius: 1rem 1rem 0 0
+        &Caption
+          &Title
+            margin: .25rem 0 0 .75rem
+      &Desc
+        margin: .25rem 0 .25rem .75rem
+        &Price
+      &Grade
+        margin: 0 0 .25rem .75rem
+        &Icon
+          color: $blue
+  &Favorite
+    @extend .hostingWrapper
