@@ -112,10 +112,14 @@ a {
   padding: 0 1.5rem;
   box-sizing: border-box;
   width: 14rem;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Raleway", "Sans serif";
 }
 .searchFormSearchinput::placeholder {
   font-family: "Raleway", "Sans serif";
   font-size: 1rem;
+  color: #00000069;
 }
 .searchFormSubmitinput {
   background-color: #0065FC;
@@ -126,6 +130,7 @@ a {
   padding: 0 1.5rem;
   font-family: "Raleway", "Sans serif";
   font-size: 1rem;
+  cursor: pointer;
 }
 .searchFilters {
   display: flex;
@@ -144,6 +149,7 @@ a {
   border: 2px solid #d9d9d9;
   border-radius: 2rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .searchFiltersFilter:last-child {
   margin-right: 0;
@@ -158,6 +164,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: -2px;
 }
 .searchFiltersFilterWrapiconIcon {
   color: blue;
@@ -191,29 +198,38 @@ a {
 
 .hostingWrapper, .hostingFavorite, .hostingMain {
   background-color: #F2F2F2;
-  border-radius: 2rem;
-  padding: 3rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
 }
 
 .hosting {
   display: grid;
-  column-gap: 4rem;
+  column-gap: 2rem;
   grid-template-columns: 6fr 3fr;
 }
+.hostingMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.hostingMainHeader {
+  grid-column: 1/span 3;
+}
 .hostingMainHeaderTitle {
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 .hostingMainCard {
   background-color: white;
-  width: 18rem;
-  padding: 0.5rem;
+  padding: 0.375rem;
   border-radius: 1.25rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.11);
 }
 .hostingMainCardFigure {
   margin: 0;
 }
 .hostingMainCardFigureImg {
-  height: 10rem;
+  height: 7rem;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
@@ -221,16 +237,147 @@ a {
   border-radius: 1rem 1rem 0 0;
 }
 .hostingMainCardFigureCaptionTitle {
-  margin: 0.25rem 0 0 0.75rem;
+  margin: 0.25rem 0.75rem 0 0.75rem;
 }
 .hostingMainCardDesc {
-  margin: 0.25rem 0 0.25rem 0.75rem;
+  margin: 0.25rem 0.75rem 0.25rem 0.75rem;
+}
+.hostingMainCardDescPrice {
+  font-weight: bols;
 }
 .hostingMainCardGrade {
-  margin: 0 0 0.25rem 0.75rem;
+  margin: 0 0.75rem 0.25rem 0.75rem;
 }
-.hostingMainCardGradeIcon {
+.hostingMainCardGradeIcon[data-active=true] {
   color: #0065FC;
+}
+.hostingMainCardGradeIcon[data-active=false] {
+  color: #d9d9d9;
+}
+.hostingMainViewmore {
+  font-weight: bold;
+}
+.hostingFavorite {
+  display: grid;
+  row-gap: 2rem;
+  align-items: start;
+}
+.hostingFavoriteTitle {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.hostingFavoriteWrapcontent {
+  display: flex;
+  align-items: stretch;
+}
+.hostingFavoriteWrapcontentImg {
+  width: 33%;
+  min-height: 8rem;
+  height: auto;
+  border-radius: 1rem 0 0 1rem;
+}
+.hostingFavoriteWrapcontentContent {
+  display: flex;
+  flex-direction: column;
+}
+.hostingFavoriteWrapcontentContentWhitespace {
+  flex: 1;
+}
+.hostingFavoritehostingMainCard {
+  height: 8.75rem;
+}
+
+@media (max-width: 1440px) {
+  .hosting {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .hostingFavorite {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+  .hostingFavoriteTitle {
+    grid-column: 1/span 3;
+  }
+}
+@media (max-width: 825px) {
+  .hostingMain {
+    grid-template-columns: 1fr;
+  }
+}
+.activity {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  grid-template-rows: auto 8rem 3rem 3rem 3rem 8rem;
+  margin: 4rem 0;
+}
+.activityTitle {
+  grid-column: 1/-1;
+}
+.activityCard {
+  background-color: #F2F2F2;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.activityCardTitle {
+  margin: 1rem;
+}
+.activityCardImg {
+  max-width: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+.activityCard1 {
+  grid-row: 2/7;
+  grid-column: 1/2;
+}
+.activityCard2 {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.activityCard3 {
+  grid-column: 3/4;
+  grid-row: 2/7;
+}
+.activityCard4 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.activityCard5 {
+  grid-column: 2/3;
+  grid-row: 5/7;
+}
+.activityCard6 {
+  grid-column: 4/5;
+  grid-row: 4/7;
+}
+
+.footer {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+.footerColumnwrapper {
+  display: flex;
+  max-width: 100%;
+  width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.footerColumnwrapperColumn {
+  width: 30%;
+  padding: 2rem 0;
+}
+.footerColumnwrapperColumnLink {
+  display: block;
+  margin: 1rem 0;
+}
+.footerColumnwrapperColumnLink:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
