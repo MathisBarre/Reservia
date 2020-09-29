@@ -111,13 +111,6 @@ a
         font-family: "Raleway", "Sans serif"
         font-size: 1rem
         color: #00000069
-      // &:focus
-      //   border-top: solid 1px black
-      //   border-bottom: solid 1px black
-      //   border-left: none
-      //   border-right: none
-      //   box-shadow: none
-      //   box-shadow: inner 
     &Submitinput
       background-color: $blue
       color: white
@@ -193,18 +186,21 @@ a
   &Main
     @extend .hostingWrapper
     display: grid
-    grid-template-columns: repeat(3, 1fr)
     column-gap: 2rem
     row-gap: 2rem
     &Header
-      grid-column: 1 / span 3
+      grid-column: 1 / -1
       &Title
         margin: 0
     &Card
       background-color: white
       padding: 0.375rem
       border-radius: 1.25rem
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.11)
+      box-shadow: 0 0 16px #0000002e
+      transition-duration: .1s
+      cursor: pointer
+      &:hover
+        transform: scale(1.02)
       &Figure
         margin: 0
         &Img
@@ -262,51 +258,97 @@ a
       grid-template-columns: repeat(3, 1fr)
       column-gap: 2rem
       &Title
-        grid-column: 1 / span 3
+        grid-column: 1 / -1
 
-@media (max-width: 825px)
+@media (min-width: 925px)
+  .hosting
+    &Main
+      grid-template-columns: repeat(3, 1fr)
+
+@media (max-width: 925px) and (min-width: 650px)
+  .hosting
+    &Main
+      grid-template-columns: 1fr 1fr
+ 
+@media (max-width: 650px)
   .hosting
     &Main
       grid-template-columns: 1fr
 
+@media (max-width: 1000px)
+  .hosting
+    &Favorite
+      grid-template-columns: 1fr
+
 .activity
   display: grid
-  grid-template-columns: repeat(4, 1fr)
   column-gap: 2rem
-  grid-template-rows: auto 8rem 3rem 3rem 3rem 8rem
   margin: 4rem 0
   &Title
     grid-column: 1 / -1 
   &Card
-    background-color: $grey
+    box-shadow: 0 0 20px #0000002e
     border-radius: 1rem
     overflow: hidden
     display: flex
     flex-direction: column
-    &Title
-      margin: 1rem
-    &Img
-      max-width: 100%
+    transition-duration: .1s
+    cursor: pointer
+    &:hover
+      transform: scale(1.01)
+    &Wrapimg
+      position: relative
       flex: 1
-      object-fit: cover
-    &1
-      grid-row: 2 / 7
-      grid-column: 1 / 2
-    &2
-      grid-column: 2 / 3
-      grid-row: 2 / 4
-    &3
-      grid-column: 3 / 4
-      grid-row: 2 / 7
-    &4
-      grid-column: 4 / 5
-      grid-row: 2 / 3
-    &5
-      grid-column: 2 / 3
-      grid-row: 5 / 7
-    &6
-      grid-column: 4 / 5
-      grid-row: 4 / 7
+      &Img
+        position: absolute
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &Title
+      margin: 1.2rem 1.5rem
+
+@media (min-width: 1100px)
+  .activity
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem
+    &Card
+      &1
+        grid-row: 2 / 7
+        grid-column: 1 / 2
+      &2
+        grid-column: 2 / 3
+        grid-row: 2 / 4
+      &3
+        grid-column: 3 / 4
+        grid-row: 2 / 7
+      &4
+        grid-column: 4 / 5
+        grid-row: 2 / 3
+      &5
+        grid-column: 2 / 3
+        grid-row: 5 / 7
+      &6
+        grid-column: 4 / 5
+        grid-row: 4 / 7
+
+@media (max-width: 1100px)
+  .activity
+    row-gap: 2rem
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: auto 12rem 12rem
+
+@media (max-width: 925px)
+  .activity
+    row-gap: 2rem
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: auto 12rem 12rem 12rem
+
+@media (max-width: 650px)
+  .activity
+    row-gap: 2rem
+    grid-template-columns: 1fr
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem
+
 
 .footer
   background-color: $grey
