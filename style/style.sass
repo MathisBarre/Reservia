@@ -137,8 +137,12 @@ a
       border-radius: 2rem
       margin-bottom: 1rem
       cursor: pointer
+      transition-duration: .1s
       &:last-child
         margin-right: 0
+      &:hover
+        background-color: #f3f8ff
+        transform: scale(1.015)
       &Wrapicon
         background-color: $lightBlue
         border-radius: 100%
@@ -199,6 +203,8 @@ a
       box-shadow: 0 0 16px #0000002e
       transition-duration: .1s
       cursor: pointer
+      box-sizing: border-box
+      height: 100%
       &:hover
         transform: scale(1.02)
       &Figure
@@ -230,6 +236,7 @@ a
     display: grid
     row-gap: 2rem
     align-items: start
+    grid-template-rows: auto repeat(3, 1fr)
     &Title
       margin: 0
       display: flex
@@ -237,11 +244,20 @@ a
     &Wrapcontent
       display: flex
       align-items: stretch
-      &Img
+      height: 100%
+      overflow: auto
+      &Wrapimg
+        position: relative
+        min-height: 100%
         width: 33%
-        min-height: 8rem
-        height: auto
-        border-radius: 1rem 0 0 1rem
+        min-width: 33%
+        max-width: 33%
+        &Img
+          border-radius: 1rem 0 0 1rem
+          position: absolute
+          width: 100%
+          height: 100%
+          object-fit: cover
       &Content
         display: flex
         flex-direction: column
@@ -256,6 +272,7 @@ a
     row-gap: 2rem
     &Favorite
       grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: auto 10rem
       column-gap: 2rem
       &Title
         grid-column: 1 / -1
@@ -279,6 +296,7 @@ a
   .hosting
     &Favorite
       grid-template-columns: 1fr
+      grid-template-rows: auto repeat(3, 9rem)
 
 .activity
   display: grid
@@ -293,7 +311,6 @@ a
     display: flex
     flex-direction: column
     transition-duration: .1s
-    cursor: pointer
     &:hover
       transform: scale(1.01)
     &Wrapimg
@@ -317,7 +334,7 @@ a
         grid-column: 1 / 2
       &2
         grid-column: 2 / 3
-        grid-row: 2 / 4
+        grid-row: 2 / 5
       &3
         grid-column: 3 / 4
         grid-row: 2 / 7
@@ -326,7 +343,7 @@ a
         grid-row: 2 / 3
       &5
         grid-column: 2 / 3
-        grid-row: 5 / 7
+        grid-row: 6 / 7
       &6
         grid-column: 4 / 5
         grid-row: 4 / 7
@@ -362,9 +379,28 @@ a
     box-sizing: border-box
     &Column
       width: 30%
-      padding: 2rem 0
+      padding: 2rem 2rem
       &Link
         display: block
         margin: 1rem 0
         &:hover
           text-decoration: underline
+
+@media (max-width: 750px)
+  .footer
+    &Columnwrapper
+      flex-direction: column
+      padding: 2rem
+      &Column
+        width: 100%
+        padding: 0
+        margin: 1rem 0
+        &:first-child
+          margin-top: 0
+        &:last-child
+          margin-bottom: 0
+        &Title
+          margin: 0
+        &Link
+          &:last-child
+            margin-bottom: 0
