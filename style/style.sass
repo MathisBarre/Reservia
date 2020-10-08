@@ -32,6 +32,8 @@ a
       font-weight: 500
       text-align: center
       transition-duration: .1s
+      border-top: 3px transparent solid
+      border-bottom: 3px transparent solid
       &[data-active='true']
         color: $blue
       &:hover
@@ -44,13 +46,15 @@ a
     color: $blue
     font-weight: 600
 
-@media screen and ( min-width: 600px ) // Desktop
+@media screen and ( min-width: 601px ) // Desktop
   .header
     grid-template-columns: auto 1fr auto auto
     grid-template-areas: "logo . navbar button"
     &Nav
       &Link
         &[data-active='true']
+          border-top: 3px solid $blue
+        &:hover
           border-top: 3px solid $blue
 
 @media screen and ( max-width: 600px ) // Phone
@@ -68,6 +72,8 @@ a
         border-bottom: 3px solid $grey
         width: 50%
         &[data-active='true']
+          border-bottom-color: $blue
+        &:hover
           border-bottom-color: $blue
 
 .main
@@ -135,6 +141,7 @@ a
       margin-bottom: 1rem
       cursor: pointer
       transition-duration: .1s
+      font-weight: bold
       &:last-child
         margin-right: 0
       &:hover
@@ -174,6 +181,29 @@ a
         color: $blue
     &Text
       margin: 0
+
+@media screen and ( max-width: 600px ) // Phone
+  .search
+    &Form
+      display: flex
+      width: 100%
+      &Searchinput
+        flex: 1
+        width: undefined
+      &Submitinput
+        &Text
+          display: none
+        &Icon
+          display: block
+
+@media screen and ( min-width: 601px ) // Desktop
+  .search
+    &Form
+      &Submitinput
+        &Text
+          display: block
+        &Icon
+          display: none!important
 
 .hostingWrapper
   background-color: $grey
@@ -271,6 +301,7 @@ a
       grid-template-columns: repeat(3, 1fr)
       grid-template-rows: auto 10rem
       column-gap: 2rem
+      grid-row-start: 1
       &Title
         grid-column: 1 / -1
 

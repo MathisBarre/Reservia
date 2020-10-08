@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reservia</title>
+  <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/style.css">
   <script src="https://kit.fontawesome.com/406da18a0b.js" crossorigin="anonymous" defer ></script>
 </head>
@@ -32,8 +33,11 @@
         <span class="searchFormWrapicon">
           <i class="fas fa-map-marker-alt searchFormWrapiconIcon"></i>
         </span>
-        <input class="searchFormSearchinput" type="search" placeholder="Marseille, France">
-        <input class="searchFormSubmitinput" type="submit" value="Rechercher">
+        <input class="searchFormSearchinput" type="search" placeholder="Marseille, France" size="1">
+        <button class="searchFormSubmitinput">
+          <span class="searchFormSubmitinputText">Rechercher</span>
+          <i class="searchFormSubmitinputIcon fas fa-search"></i>
+        </button>
       </form>
       <div class="searchFilters">
         <h2 class="searchFiltersTitle">Filtres</h2>
@@ -41,25 +45,25 @@
           <div class="searchFiltersFilterWrapicon">
             <i class="fas fa-money-bill-wave searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3 class="searchFiltersFilterTitle">Économique</h3>
+          <span class="searchFiltersFilterTitle">Économique</span>
         </div>
         <div class="searchFiltersFilter">
           <div class="searchFiltersFilterWrapicon">
             <i class="fas fa-child searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3 class="searchFiltersFilterTitle">Familial</h3>
+          <span class="searchFiltersFilterTitle">Familial</span>
         </div>
         <div class="searchFiltersFilter">
           <div class="searchFiltersFilterWrapicon">
             <i class="fas fa-heart searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3 class="searchFiltersFilterTitle">Romantique</h3>
+          <span class="searchFiltersFilterTitle">Romantique</span>
         </div>
         <div class="searchFiltersFilter">
           <div class="searchFiltersFilterWrapicon">
             <i class="fas fa-dog searchFiltersFilterWrapiconIcon"></i>
           </div>
-          <h3 class="searchFiltersFilterTitle">Animaux autorisés</h3>
+          <span class="searchFiltersFilterTitle">Animaux autorisés</span>
         </div>
       </div>
       <div class="searchResult">
