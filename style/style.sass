@@ -23,6 +23,7 @@ a
   &Img
     grid-area: logo
     padding: 0 2rem
+    height: 2.813rem
   &Nav
     display: flex
     align-items: center
@@ -189,7 +190,6 @@ a
       width: 100%
       &Searchinput
         flex: 1
-        width: undefined
       &Submitinput
         &Text
           display: none
@@ -249,7 +249,7 @@ a
       &Desc
         margin: .25rem .75rem .25rem .75rem
         &Price
-          font-weight: bols
+          font-weight: bold
       &Grade
         margin: 0 .75rem .25rem .75rem
         &Icon[data-active="true"]
@@ -258,7 +258,7 @@ a
           color: $darkGrey
     &Viewmore
       font-weight: bold
-  &Favorite
+  &Popular
     @extend .hostingWrapper
     display: grid
     row-gap: 2rem
@@ -297,7 +297,7 @@ a
   .hosting
     grid-template-columns: 1fr
     row-gap: 2rem
-    &Favorite
+    &Popular
       grid-template-columns: repeat(3, 1fr)
       grid-template-rows: auto 10rem
       column-gap: 2rem
@@ -322,7 +322,7 @@ a
 
 @media (max-width: 1000px)
   .hosting
-    &Favorite
+    &Popular
       grid-template-columns: 1fr
       grid-template-rows: auto repeat(3, 9rem)
 

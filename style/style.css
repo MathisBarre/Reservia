@@ -18,6 +18,7 @@ a {
 .headerImg {
   grid-area: logo;
   padding: 0 2rem;
+  height: 2.813rem;
 }
 .headerNav {
   display: flex;
@@ -217,7 +218,6 @@ a {
   }
   .searchFormSearchinput {
     flex: 1;
-    width: undefined;
   }
   .searchFormSubmitinputText {
     display: none;
@@ -234,7 +234,7 @@ a {
     display: none !important;
   }
 }
-.hostingWrapper, .hostingFavorite, .hostingMain {
+.hostingWrapper, .hostingPopular, .hostingMain {
   background-color: #F2F2F2;
   border-radius: 1.5rem;
   padding: 2rem;
@@ -287,7 +287,7 @@ a {
   margin: 0.25rem 0.75rem 0.25rem 0.75rem;
 }
 .hostingMainCardDescPrice {
-  font-weight: bols;
+  font-weight: bold;
 }
 .hostingMainCardGrade {
   margin: 0 0.75rem 0.25rem 0.75rem;
@@ -301,45 +301,45 @@ a {
 .hostingMainViewmore {
   font-weight: bold;
 }
-.hostingFavorite {
+.hostingPopular {
   display: grid;
   row-gap: 2rem;
   align-items: start;
   grid-template-rows: auto repeat(3, 1fr);
 }
-.hostingFavoriteTitle {
+.hostingPopularTitle {
   margin: 0;
   display: flex;
   justify-content: space-between;
 }
-.hostingFavoriteWrapcontent {
+.hostingPopularWrapcontent {
   display: flex;
   align-items: stretch;
   height: 100%;
   overflow: auto;
 }
-.hostingFavoriteWrapcontentWrapimg {
+.hostingPopularWrapcontentWrapimg {
   position: relative;
   min-height: 100%;
   width: 33%;
   min-width: 33%;
   max-width: 33%;
 }
-.hostingFavoriteWrapcontentWrapimgImg {
+.hostingPopularWrapcontentWrapimgImg {
   border-radius: 1rem 0 0 1rem;
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.hostingFavoriteWrapcontentContent {
+.hostingPopularWrapcontentContent {
   display: flex;
   flex-direction: column;
 }
-.hostingFavoriteWrapcontentContentWhitespace {
+.hostingPopularWrapcontentContentWhitespace {
   flex: 1;
 }
-.hostingFavoritehostingMainCard {
+.hostingPopularhostingMainCard {
   height: 8.75rem;
 }
 
@@ -348,13 +348,13 @@ a {
     grid-template-columns: 1fr;
     row-gap: 2rem;
   }
-  .hostingFavorite {
+  .hostingPopular {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 10rem;
     column-gap: 2rem;
     grid-row-start: 1;
   }
-  .hostingFavoriteTitle {
+  .hostingPopularTitle {
     grid-column: 1/-1;
   }
 }
@@ -374,7 +374,7 @@ a {
   }
 }
 @media (max-width: 1000px) {
-  .hostingFavorite {
+  .hostingPopular {
     grid-template-columns: 1fr;
     grid-template-rows: auto repeat(3, 9rem);
   }
