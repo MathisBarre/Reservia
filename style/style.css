@@ -226,6 +226,14 @@ a {
     display: block;
   }
 }
+@media screen and (max-width: 650px) {
+  .searchFiltersTitle {
+    width: 100%;
+  }
+  .searchFiltersFilter {
+    margin-right: 1rem;
+  }
+}
 @media screen and (min-width: 601px) {
   .searchFormSubmitinputText {
     display: block;
