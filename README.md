@@ -26,4 +26,4 @@ L'objectif est d'intégrer la maquette d'un site de planification de vacance nom
 
 ## Notes sur la réalisation du projet
 - L'integration est faite sur l'éditeur Visual Studio Code avec les plugins [Live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer), [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass) & [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph). Le thème, l'UI et les raccourcis clavier sont personnalisés.
-- [Sass](https://sass-lang.com/) est utilisé pour organiser le css. Vous trouverez le fichier sass est dans le repository (/style).
+- [Sass](https://sass-lang.com/) est utilisé pour organiser le css. Vous trouverez le fichier sass est dans le repository (/style)
